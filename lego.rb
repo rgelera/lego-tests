@@ -1,5 +1,6 @@
 class LegoHat
 
+  
   attr_accessor :size, :colour, :style
 
   def initialize(size, colour, style)
