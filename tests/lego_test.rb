@@ -38,7 +38,7 @@ class TestLego < Minitest::Test
     left_item = LegoItem.new("left item light", 5)
     right_item = LegoItem.new("right item light", 5)
     minifigure = LegoMinifigure.new("name", nil, left_item, right_item)
-    assert(!minifigure.is_strong?)
+    refute(minifigure.is_strong?)
   end
 
   def test_swapping_items
@@ -73,7 +73,7 @@ class TestLego < Minitest::Test
   def test_is_stylish_green_hat
     hat = LegoHat.new("small", "green", "cap")
     minifigure = LegoMinifigure.new("name", hat)
-    assert(!minifigure.is_stylish?)
+    refute(minifigure.is_stylish?)
   end
 
   def test_is_stylish_blue_hat
@@ -84,7 +84,7 @@ class TestLego < Minitest::Test
 
   def test_is_stylish_no_hat
     minifigure = LegoMinifigure.new("name")
-    assert(!minifigure.is_stylish?)
+    refute(minifigure.is_stylish?)
   end
 
   def test_wear_hat
